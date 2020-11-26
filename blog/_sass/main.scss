@@ -1,0 +1,16 @@
+$footer-background: #4682b4;
+
+.current {
+  color: green;
+}
+
+.footer {
+	background: $footer-background;
+	color: white;
+	padding: 0.3rem 1rem;
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	text-align: center;
+}
