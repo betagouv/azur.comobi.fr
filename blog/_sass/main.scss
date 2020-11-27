@@ -1,16 +1,85 @@
 $footer-background: #4682b4;
+$main-background: rgb(255, 255, 246);
+$main-font: 'Work Sans', sans-serif;
 
 .current {
   color: green;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	font-family: $main-font;
+	height: 100%;
+	background-color: $main-background;
+	display: flex;
+	flex-direction: column;
+	.header, .footer {
+		flex-shrink: 0;
+	}
+}
+
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+a[href^='mailto:']::before {
+	content: '📧 ';
+}
+
+a[href^='tel:']::before {
+	content: '📞 ';
+}
+
+
 .footer {
 	background: $footer-background;
 	color: white;
 	padding: 0.3rem 1rem;
-	a {
-		color: inherit;
-		text-decoration: underline;
-	}
 	text-align: center;
+	p {
+		margin: 0;
+	}
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+	flex-direction: column;
+	h1 {
+		text-decoration: none;
+		font-size: 250%;
+	}
+	.logo {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 100%;
+		position: relative;
+		margin-top: 0;
+		background: url("/assets/images/header.png") no-repeat center center fixed;
+		.btn-div {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+
+	.logo img {
+		margin: 1rem;
+		width: 8rem;
+	}	
+}
+
+.content {
+ 	padding: 1rem calc(max(5px, -25em + 50vw));
 }
