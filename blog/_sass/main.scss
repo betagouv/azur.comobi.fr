@@ -1,6 +1,8 @@
 $footer-background: #4682b4;
 $main-background: rgb(255, 255, 246);
 $main-font: 'Work Sans', sans-serif;
+$search-btn-color: rgba(70, 130, 180, 1);
+$proposal-btn-color: #9fba93;
 
 .current {
   color: green;
@@ -34,6 +36,21 @@ a[href^='tel:']::before {
 	content: '📞 ';
 }
 
+.btn {
+	display: block;
+	border: none;
+	color: white;
+	padding: 0.6rem 1rem;
+	background-color: $search-btn-color
+}
+
+.search {
+	background-color: $search-btn-color
+}
+
+.proposal {
+	background-color: $proposal-btn-color;
+}
 
 .footer {
 	background: $footer-background;
@@ -50,9 +67,16 @@ a[href^='tel:']::before {
 	justify-content: center;
 	margin-top: 0;
 	flex-direction: column;
+	padding: 2rem 0;
 	h1 {
 		text-decoration: none;
 		font-size: 250%;
+		background-color: rgba(255, 255, 255, 0.5);
+		padding: 1rem 1rem;
+	}
+	p {
+		background-color: rgba(255, 255, 255, 0.5);
+		padding: 1rem 1rem;
 	}
 	.logo {
 		display: flex;
@@ -77,9 +101,24 @@ a[href^='tel:']::before {
 	.logo img {
 		margin: 1rem;
 		width: 8rem;
+	}
+
+	.btn {
+		margin: 0.6rem;
 	}	
 }
 
 .content {
  	padding: 1rem calc(max(5px, -25em + 50vw));
+ 	.btn {
+ 		text-decoration: none;
+		margin: 0.6rem auto;
+		width: max-content;
+		padding: 0.8rem;
+	}
+	img {
+		display: block;
+		margin: 0px auto;
+		width: 10rem;
+	}
 }
