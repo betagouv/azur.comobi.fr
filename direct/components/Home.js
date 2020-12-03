@@ -75,8 +75,8 @@ export default () => html`
 		}
 
 		section:first-child p, section:first-child h1 {
-				padding: 0 1.3rem;
-				background: white;
+			padding: 0 1.3rem;
+			background: rgba(255, 255, 255, 0.85);
 		}
 		section:first-child p {
 			text-align: center;
