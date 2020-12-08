@@ -126,9 +126,5 @@ a[href^='tel:']::before {
 }
 
 .faq {
-	padding: 1rem calc(max(5px, -25em + 50vw));
 	background-color: $faq-color;
-	p a {
-		display: inline;
-	}
 }

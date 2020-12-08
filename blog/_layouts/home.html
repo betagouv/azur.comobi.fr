@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% assign sections = content | split: "<!--faq -->" %}
+<div class="content">
+  {{ sections[0] }}
+</div>
+<div class="content faq">
+  {{ sections[1] }}
+</div>
