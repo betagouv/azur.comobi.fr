@@ -3,6 +3,7 @@ $main-background: rgb(255, 255, 246);
 $main-font: 'Work Sans', sans-serif;
 $search-btn-color: rgba(70, 130, 180, 1);
 $proposal-btn-color: #9fba93;
+$faq-color: #ecf0f1;
 
 .current {
   color: green;
@@ -18,6 +19,7 @@ body {
 	background-color: $main-background;
 	display: flex;
 	flex-direction: column;
+	margin: 0px;
 	.header, .footer {
 		flex-shrink: 0;
 	}
@@ -120,5 +122,13 @@ a[href^='tel:']::before {
 		display: block;
 		margin: 0px auto;
 		width: 10rem;
+	}
+}
+
+.faq {
+	padding: 1rem calc(max(5px, -25em + 50vw));
+	background-color: $faq-color;
+	p a {
+		display: inline;
 	}
 }
