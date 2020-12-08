@@ -33,26 +33,24 @@ let Main = function({
 			<${styled.div`
 				flex-grow: 1;
 			`}>
-			<${Router}>
-			<${Switch}>
-			<${Route} exact path="/">
-				<${Home} />
-			<//>
-			<${Route} path="/inscription">
-				<${Inscription} />
-			<//>
-			<${Route} path="/recherche">
-			<${TripSelection}
-			...${{
-				tripProposalsByTrip,
-				tripRequest,
-				tripDetailsByTrip,
-				validPlaceNames,
-				onTripRequestChange
-			}}<//>
-			<//>
+			<${Router}><${Switch}>
+				<${Route} exact path="/">
+					<${Home} />
+				<//>
+				<${Route} path="/inscription">
+					<${Inscription} />
+				<//>
+				<${Route} path="/recherche">
+					<${TripSelection}
+					...${{
+						tripProposalsByTrip,
+						tripRequest,
+						tripDetailsByTrip,
+						validPlaceNames,
+						onTripRequestChange
+					}}<//>
+				<//>
 			<//><//>
-
 			</div>
 			<${Footer} />
 		</main>

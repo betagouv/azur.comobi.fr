@@ -11,19 +11,6 @@ import styled from 'styled-components'
 
 const html = htm.bind(React.createElement)
 
-const searchCity = (input, setOptions) =>
-	json(
-		`https://geo.api.gouv.fr/communes?nom=${input}&fields=nom,code,departement,region&boost=population`
-	)
-		.then(json => setOptions(json))
-		.catch(function(error) {
-			console.error(
-				'Erreur dans la recherche de communes à partir du code postal',
-				error
-			)
-			setOptions([])
-		})
-
 let Input = styled.input`
 	margin: 0 0.6rem 0 0.6rem;
 	border: 3px solid steelblue;
@@ -46,14 +33,8 @@ const CityInput = ({ label, input, setInput }) => {
 					type="text"
 					list="valid-place-names"
 					value=${input.text}
-					onChange=${e => {
-						const value = e.target.value
-						setInput({ text: value, validated: false })
-						if (value.length > 2) searchCity(e.target.value, setOptions)
-						// Vérifier qu'aucune ville n'est exclue : https://fr.wikipedia.org/wiki/Liste_de_toponymes_courts
-					}}
+					
 				/>
-				${input.validated && '✔'}
 			</label>
 		</div>
 	`
