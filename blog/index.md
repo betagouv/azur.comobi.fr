@@ -1,12 +1,7 @@
 ---
 layout: home
-title: Azur.CoMobi
-subtitle: Circulez autour de Valberg en covoiturage !
-mel: mdjenaihi@valberg.com
-tel: 04 93 23 24 25
-
 ---
-# Pas de transports en communs ? votre territoire vous propose une solution facile !
+# Pas de transports en communs ? votre territoire vous propose une solution facile ! 
 Simple, gratuit, solidaire, azur.comobi est un service de covoiturage de proximité qui met en relation des conducteurs avec des personnes souhaitant partager leur trajet parce qu’ils n’ont pas de véhicule, permis ou parce qu’il préfèrent économiser leurs trajets !
 
 ![Carte](/assets/images/carte.png)
@@ -38,7 +33,7 @@ Non, sauf si ça arrange tout le monde. Un passager peut faire
 l'aller et le retour avec des conducteurs différents.
 
 # Est-ce que je peux contacter directement les conducteurs qui m'intéressent ?
-Oui, en cliquant <${Link} to="/recherche">ici <//>vous pouvez
+Oui, en cliquant [ici](/rechercher) vous pouvez
 rechercher un trajet dans notre base de conducteurs inscrits.
 
 # Comment ça se passe côté assurances et s'il y a un accident pendant le covoiturage ?
