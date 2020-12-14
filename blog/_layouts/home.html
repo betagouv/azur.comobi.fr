@@ -3,9 +3,9 @@ layout: default
 ---
 
 {% assign sections = content | split: "<!--faq -->" %}
-<div class="content">
+<section class="content">
   {{ sections[0] }}
-</div>
-<div class="content faq">
+</section>
+<section class="content faq">
   {{ sections[1] }}
-</div>
+</section>
