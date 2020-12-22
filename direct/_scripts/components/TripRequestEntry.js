@@ -36,11 +36,15 @@ const CityInput = ({ label, input, setInput }) => {
 	const [options, setOptions] = useState([])
 
 	return html`
-		<div>
+		<${styled.div`
+			width: max-content;
+			align-self: center;
+		`}>
 			<label>
 				<${styled.strong`
 					display: inline-block;
 					width: 4.5rem;
+					width: max-content;
 				`}>${label}</strong>
 				<${Input}
 					type="text"
@@ -107,7 +111,7 @@ export default function TripRequestEntry({
 					setInput=${setDestination}
 				/>
 			</section>
-			<button type="submit">Rechercher</button>
+			<a type="submit">Rechercher</a>
 		</form>
 	`
 }

@@ -3,7 +3,7 @@ import htm from 'htm'
 import styled from 'styled-components'
 import TripProposal from './TripProposal'
 import computeDetour from './computeDetour'
-const instance = require(`../../instances/${INSTANCE}.yaml`)
+const instance = require(`../../_instances/${INSTANCE}.yaml`)
 
 const html = htm.bind(React.createElement)
 

@@ -6,8 +6,8 @@ import { json } from 'd3-fetch'
 
 import Main from './components/Main.js'
 
-import { makeTrip } from '../geography/driverToTrip'
-import computeTripDetails from '../geography/computeTripDetails'
+import { makeTrip } from '../../geography/driverToTrip'
+import computeTripDetails from '../../geography/computeTripDetails'
 
 import _actions from './actions.js'
 
@@ -81,7 +81,7 @@ function renderUI(store) {
 			}}
 			/>
 		`,
-		document.body
+		document.querySelector('.react-component')
 	)
 }
 
@@ -94,7 +94,7 @@ console.log(store.state)
 // initial render
 renderUI(store)
 
-json('/driver-trip-proposals').then(tripProposals => {
+json('http://localhost:5000/driver-trip-proposals').then(tripProposals => {
 	const tripProposalsByTrip = new Map()
 
 	for (const tripProposal of tripProposals) {
@@ -107,4 +107,5 @@ json('/driver-trip-proposals').then(tripProposals => {
 	store.mutations.addTripProposals(tripProposalsByTrip)
 })
 
-json('/valid-place-names').then(store.mutations.setValidPlaceNames)
+json('http://localhost:5000/valid-place-names').then(store.mutations.setValidPlaceNames)
+

@@ -3,8 +3,7 @@ import htm from 'htm'
 const html = htm.bind(React.createElement)
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Container from './Inscription'
-const instance = require(`../../instances/${INSTANCE}.yaml`)
+const instance = require(`../_instances/${INSTANCE}.yaml`)
 import FAQ from './FAQ.js'
 
 export const NomService = () => html`
