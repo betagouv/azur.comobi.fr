@@ -2,7 +2,8 @@
 let webpack = require('webpack')
 let devMode = process.env.NODE_ENV === 'development'
 
-console.log(process.env.INSTANCE)
+const instance = process.env.INSTANCE !== undefined ? process.env.INSTANCE : 'valberg' 
+console.log(instance)
 
 module.exports = {
 	module: {
@@ -38,7 +39,7 @@ module.exports = {
 	plugins: [
 		devMode && new webpack.HotModuleReplacementPlugin(),
 		new webpack.DefinePlugin({
-			INSTANCE: JSON.stringify(process.env.INSTANCE)
+			INSTANCE: JSON.stringify(instance)
 		})
 	].filter(Boolean)
 }
