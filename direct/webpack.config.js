@@ -7,7 +7,7 @@ module.exports = {
 	...common,
 	entry: [
 		...(common.mode === 'development' ? ['webpack-hot-middleware/client'] : []),
-		path.resolve(__dirname, 'main.js')
+		path.resolve(__dirname, '_scripts/main.js')
 	],
 	output: {
 		filename: 'bundle.js',
