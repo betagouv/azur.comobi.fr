@@ -1,0 +1,175 @@
+$footer-background: #4682b4;
+$main-background: rgb(255, 255, 246);
+$main-font: 'Work Sans', sans-serif;
+$search-btn-color: #199bb0;
+$proposal-btn-color: #22aa75;
+$faq-color: #ecf0f1;
+$header-background:rgb(184, 228, 231);
+
+
+.current {
+  color: green;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: $main-font;
+	height: 100%;
+	background-color: $main-background;
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	.header, .footer {
+		flex-shrink: 0;
+	}
+}
+
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	font-size: 1.3em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(0, 123, 255);
+}
+a[href^='mailto:']::before {
+	content: '📧 ';
+}
+a[href^='tel:']::before {
+	content: '📞 ';
+}
+
+///// BTN ////
+.btn {
+	display: block;
+	border: none;
+	padding: 0.6rem 1rem;
+	margin: 0 5px;
+	color: white;
+}
+
+.search {
+	@extend .btn;
+	background-color: $search-btn-color;
+}
+
+.proposal {
+	@extend .btn;
+	background-color: $proposal-btn-color;
+}
+
+.contact-link {
+	background: rgba(147, 196, 125, 1);
+	color: white;
+	width: 14rem;
+}
+
+.simple {
+	background: none;
+	border: 1px solid black;
+}
+
+.footer {
+	background: $footer-background;
+	color: white;
+	padding: 0.3rem 1rem;
+	text-align: center;
+	p {
+		margin: 0;
+	}
+	a {
+		color: white;
+	}
+}
+
+.header {
+	display: block;
+	width: 100%;
+	background-color: $header-background;
+
+	img {
+		max-width: 100%;
+		object-fit: contain;
+		min-height: 5vh;
+	}
+}
+
+.btn-list {
+	display: flex;
+	flex-direction: column;
+	-moz-box-align: center;
+	align-items: center;
+	max-width: 100%;
+	position: relative;
+	margin-top: 0px;
+	padding: 1rem calc(max(5px, -25em + 50vw));
+	background-color: $header-background;
+
+	div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+	a {
+		display: flex;
+		-moz-box-pack: center;
+		justify-content: center;
+		text-decoration: none;
+		margin: 0.5rem auto;
+	}
+}
+
+.content {
+	padding: 1rem calc(max(5px, -25em + 50vw));
+	.large {
+		width: 100%;
+		margin: 0px auto;
+		display: block;
+		object-fit: contain;
+		height: 100%;
+	}
+ 	.btn {
+ 		text-decoration: none;
+		margin: 0.6rem auto;
+		width: max-content;
+		padding: 0.8rem;
+	}
+	img {
+		display: block;
+		margin: 0px auto;
+		width: 100%;
+		object-fit: contain;
+		height: 100px;
+	}
+}
+
+.faq {
+	background-color: $faq-color;
+}
+
+.react-component {
+	padding: 1rem calc(max(5px, -25em + 50vw));
+	display: flex;
+	justify-content: center;
+	align-content: end;
+	background-color: #fffff6;
+}
+
+.trip-request-entry a {
+	@extend .search;
+	width: max-content;
+	margin: 0 auto;
+}

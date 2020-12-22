@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="btn-list">
+  <div>
+    <a href="/recherche" class="search">Rechercher un trajet</a>
+    <a href="/recherche" class="proposal">Proposer mon trajet</a>
+  </div>
+</section>
+
+{% assign sections = content | split: "<!--faq -->" %}
+<section class="content">
+  {{ sections[0] }}
+</section>
+<section class="content faq">
+  {{ sections[1] }}
+</section>

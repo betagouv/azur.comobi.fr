@@ -1,0 +1,52 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+	<link crossorigin="anonymous" rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/twbs/bootstrap@v4/dist/css/bootstrap-reboot.css" />
+
+
+{% comment %} 
+Styles are added based on the page.styles variable
+This variable is defined in front-matter with:
+---
+styles:
+    - href: "./yo.css"
+    - href: "./font-maybe.css"
+---
+{% endcomment %}
+
+    {%- if page.styles -%} {%- for style in page.styles -%}
+    <link crossorigin="anonymous" rel="stylesheet" href="{{ style.href }}">
+    {%- endfor -%} {%- endif -%}
+
+
+
+{% comment %} 
+Scripts are added based on the page.scripts variable
+This variable is defined in front-matter with:
+
+---
+scripts:
+    - src: "./script1.js"
+      defer: true
+      async: false
+      crossorigin: "anonymous"
+    - src: "./script2.js"
+      defer: true
+      type: "module"
+---
+
+{% endcomment %}
+
+    {%- if page.scripts -%} {%- for script in page.scripts -%}
+    <script src="{{ script.src }}" 
+        {% if script.type %} type="{{ script.type }}" {% endif %}
+        {% if script.defer %} defer {% endif %}
+        {% if script.async %} async {% endif %}
+        crossorigin="{% if script.crossorigin %}{{ script.crossorigin }}{% else %}anonymous{% endif %}"></script>
+    {%- endfor -%} {%- endif -%}
+</head>
