@@ -1,10 +1,8 @@
 $footer-background: #4682b4;
 $main-background: rgb(255, 255, 246);
 $main-font: 'Work Sans', sans-serif;
-$search-btn-color: #199bb0;
-$proposal-btn-color: #22aa75;
 $faq-color: #ecf0f1;
-$header-background:rgb(184, 228, 231);
+$header-background: rgb(184, 228, 231);
 
 
 .current {
@@ -58,16 +56,6 @@ a[href^='tel:']::before {
 	padding: 0.6rem 1rem;
 	margin: 0 5px;
 	color: white;
-}
-
-.search {
-	@extend .btn;
-	background-color: $search-btn-color;
-}
-
-.proposal {
-	@extend .btn;
-	background-color: $proposal-btn-color;
 }
 
 .contact-link {

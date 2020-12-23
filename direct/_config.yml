@@ -1,49 +1,21 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Azur.CoMobi
-subtitle: Circulez autour de Valberg en covoiturage !
-mel: mdjenaihi@valberg.com
+titre: Azur.CoMobi
+sous-titre: Circulez autour de Valberg en covoiturage !
+mail: mdjenaihi@valberg.com
 tel: 04 93 23 24 25
 
+couleurs: 
+  bouton_rechercher: '#199bb0'
+  bouton_proposer: '#22aa75'
+
+bandeau:
+  image: /assets/images/Bandeau azur comobi.png
+  texte: Bandeau azur.comobi.fr avec le logo comobi et les logos des collectivités qui financent
+
+## Les sections suivantes ne sont pas à modifier
 sass:
   sass_dir: _sass
   style: compressed
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 exclude:
   - _scripts/
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+

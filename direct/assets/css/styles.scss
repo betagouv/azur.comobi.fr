@@ -2,3 +2,13 @@
 ---
 @import "main";
 
+.search {
+	@extend .btn;
+	background-color: {{ site.couleurs.bouton_rechercher }};
+}
+
+.proposal {
+	@extend .btn;
+	background-color: {{ site.couleurs.bouton_proposer }};
+}
+
