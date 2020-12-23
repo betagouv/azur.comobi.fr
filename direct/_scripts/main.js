@@ -94,7 +94,7 @@ console.log(store.state)
 // initial render
 renderUI(store)
 
-json('http://localhost:5000/driver-trip-proposals').then(tripProposals => {
+json(`${SERVER_URL}/driver-trip-proposals`).then(tripProposals => {
 	const tripProposalsByTrip = new Map()
 
 	for (const tripProposal of tripProposals) {
@@ -107,5 +107,5 @@ json('http://localhost:5000/driver-trip-proposals').then(tripProposals => {
 	store.mutations.addTripProposals(tripProposalsByTrip)
 })
 
-json('http://localhost:5000/valid-place-names').then(store.mutations.setValidPlaceNames)
+json(`${SERVER_URL}/http://localhost:5000/valid-place-names`).then(store.mutations.setValidPlaceNames)
 

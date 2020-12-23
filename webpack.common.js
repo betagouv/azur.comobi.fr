@@ -1,9 +1,14 @@
 // You can't use import statements here
+const path = require("path");
 let webpack = require('webpack')
 let devMode = process.env.NODE_ENV === 'development'
+let envFile = devMode ? '.env.development' : '.env'
+const dotenv = require('dotenv').config( {
+  path: path.join(__dirname, envFile)
+} );
 
-const instance = process.env.INSTANCE !== undefined ? process.env.INSTANCE : 'valberg' 
-console.log(instance)
+console.log(dotenv.parsed.INSTANCE);
+console.log(dotenv.parsed.SERVER_URL);
 
 module.exports = {
 	module: {
@@ -39,7 +44,8 @@ module.exports = {
 	plugins: [
 		devMode && new webpack.HotModuleReplacementPlugin(),
 		new webpack.DefinePlugin({
-			INSTANCE: JSON.stringify(instance)
+			INSTANCE : JSON.stringify(dotenv.parsed.INSTANCE),
+			SERVER_URL : JSON.stringify(dotenv.parsed.SERVER_URL)
 		})
 	].filter(Boolean)
 }

@@ -7,8 +7,8 @@
 		"start": "(cp direct/Procfile .; cp direct/.env .; heroku local)",
 		"start:outil-metier": "(cp outil-metier/Procfile .; cp outil-metier/.env .; heroku local)",
 		"build": "webpack --config direct/webpack.config.js; webpack --config outil-metier/webpack.config.js",
-		"build:scripts": "webpack --config direct/webpack.config.js",
-		"dev:site":"cd direct; jekyll serve",
+		"build:scripts": "NODE_ENV=development webpack --config direct/webpack.config.js",
+		"dev:site": "cd direct; jekyll serve",
 		"dev:server": "PORT=5000 NODE_ENV=development nodenv -E direct/.env direct/server.js --exec 'node -r esm'",
 		"dev:outil-metier": "PORT=5001 NODE_ENV=development nodenv -E outil-metier/.env outil-metier/server.js --exec 'node -r esm'",
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -34,6 +34,7 @@
 		"d3-dsv": "^1.1.1",
 		"d3-fetch": "^1.1.2",
 		"delay": "^4.3.0",
+		"dotenv": "^8.2.0",
 		"esm": "^3.2.25",
 		"express": "^4.17.1",
 		"fast-memoize": "^2.5.1",
