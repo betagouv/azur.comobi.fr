@@ -18,7 +18,7 @@ const cityInputElement = styled.input`
 // This is a band-aid; the root cause has not been found
 const styledLabel = styled.label` display: block; `
 
-const CityInput = ({ label, input, setInput }) => {
+const CityInput = ({ label, value, setValue }) => {
 	return html`
 		<${styledLabel}>
 			<${styled.strong`
@@ -28,13 +28,12 @@ const CityInput = ({ label, input, setInput }) => {
 			<${cityInputElement}
 				type="text"
 				list="valid-place-names"
-				value=${input.text}
+				value=${value}
 				onChange=${e => {
 					const value = e.target.value
-					setInput({ text: value, validated: false })
+					setValue(value)
 				}}
 			/>
-			${input.validated && '✔'}
 		</label>
 	`
 }
@@ -43,18 +42,8 @@ export default function TripRequestEntry({
 	validPlaceNames,
 	onTripRequestChange
 }) {
-	/*
-	To be re-enabled after Dec 28th 2020
-	https://github.com/betagouv/comobi_valberg/issues/31
-
-	const [origin, setOrigin] = useState({
-		text: tripRequest.origin,
-		validated: false
-	})
-	const [destination, setDestination] = useState({
-		text: tripRequest.destination,
-		validated: false
-	})
+	const [origin, setOrigin] = useState( tripRequest.origin )
+	const [destination, setDestination] = useState( tripRequest.destination )
 
 	return html`
 		<${styled.h2`
@@ -63,10 +52,7 @@ export default function TripRequestEntry({
 		`} key="h2">Où allez-vous ?</h2>
 		<form key="form" className="trip-request-entry" onSubmit=${e => {
 			e.preventDefault()
-			onTripRequestChange({
-				origin: origin.text,
-				destination: destination.text
-			})
+			onTripRequestChange({ origin, destination })
 		}}>
 			<datalist id="valid-place-names">
 				${validPlaceNames.map(validPlaceName => {
@@ -76,27 +62,20 @@ export default function TripRequestEntry({
 				})}
 			</datalist>
 			<section className="geography">
-				<${CityInput} key="départ" label="Départ" input=${origin} setInput=${setOrigin} />
+				<${CityInput} 
+					key="départ" 
+					label="Départ" 
+					value=${origin} 
+					setValue=${setOrigin}
+				/>
 				<${CityInput}
 					key="arrivée"
 					label="Arrivée"
-					input=${destination}
-					setInput=${setDestination}
+					value=${destination}
+					setValue=${setDestination}
 				/>
 			</section>
 			<button type="submit">Rechercher</button>
 		</form>
 	`
-	*/
-	return html`
-		<${styled.h2`
-			text-align: center;
-			margin: 1.5rem 0;
-		`}>azur.comobi sera ouvert aux passagers et passagères le 28 décembre 2020 !</h2>
-		<${styled.p`
-			text-align: center;
-			margin: 1.5rem 0;
-		`}>Pour le moment, les conducteurs et conductrices s'inscrivent...</p>
-	`
-	
 }
