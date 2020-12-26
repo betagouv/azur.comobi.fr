@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const html = htm.bind(React.createElement)
 
-let Input = styled.input`
+const cityInputElement = styled.input`
 	margin: 0 0.6rem 0 0.6rem;
 	border: 3px solid steelblue;
 	border-radius: 0.3rem;
@@ -12,26 +12,30 @@ let Input = styled.input`
 	font-size: 110%;
 `
 
+// styledLabel is defined outside of CityInput because if it's defined inside,
+// it interacts badly with React hooks (useState) in a way that defocuses the input
+// after each character is typed
+// This is a band-aid; the root cause has not been found
+const styledLabel = styled.label` display: block; `
+
 const CityInput = ({ label, input, setInput }) => {
 	return html`
-		<div>
-			<label>
-				<${styled.strong`
-					display: inline-block;
-					width: 4.5rem;
-				`}>${label}</strong>
-				<${Input}
-					type="text"
-					list="valid-place-names"
-					value=${input.text}
-					onChange=${e => {
-						const value = e.target.value
-						setInput({ text: value, validated: false })
-					}}
-				/>
-				${input.validated && '✔'}
-			</label>
-		</div>
+		<${styledLabel}>
+			<${styled.strong`
+				display: inline-block;
+				width: 4.5rem;
+			`}>${label}</strong>
+			<${cityInputElement}
+				type="text"
+				list="valid-place-names"
+				value=${input.text}
+				onChange=${e => {
+					const value = e.target.value
+					setInput({ text: value, validated: false })
+				}}
+			/>
+			${input.validated && '✔'}
+		</label>
 	`
 }
 export default function TripRequestEntry({
