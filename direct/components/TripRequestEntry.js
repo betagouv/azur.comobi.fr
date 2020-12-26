@@ -12,6 +12,8 @@ const cityInputElement = styled.input`
 	font-size: 110%;
 `
 
+const datalistId = "valid-place-names"
+
 // styledLabel is defined outside of CityInput because if it's defined inside,
 // it interacts badly with React hooks (useState) in a way that defocuses the input
 // after each character is typed
@@ -27,7 +29,7 @@ const CityInput = ({ label, value, setValue }) => {
 			`}>${label}</strong>
 			<${cityInputElement}
 				type="text"
-				list="valid-place-names"
+				list=${datalistId}
 				value=${value}
 				onChange=${e => {
 					const value = e.target.value
@@ -54,7 +56,7 @@ export default function TripRequestEntry({
 			e.preventDefault()
 			onTripRequestChange({ origin, destination })
 		}}>
-			<datalist id="valid-place-names">
+			<datalist id=${datalistId}>
 				${validPlaceNames.map(validPlaceName => {
 					return html`
 						<option key=${validPlaceName} value=${validPlaceName} />
