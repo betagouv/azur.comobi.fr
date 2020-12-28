@@ -6,35 +6,35 @@ Simple, gratuit, solidaire, azur.comobi est un service de covoiturage de proximi
 
 ![Carte](/assets/images/carte.png){: .large}
 
-[Rechercher un trajet](/recherche){: .btn .serach }
+[Rechercher un trajet](/recherche){:target="_blank" .btn .serach }
 
 # Passagers, recherchez un trajet en ligne
 azur.comobi permet de réaliser tous les trajets du quotidien : école, sports, activités, loisirs, travail, crèche…. sur tout le bassin de vie et de déplacements autour de Valberg, depuis Puget-Théniers à Villars/Var en passant par Daluis. Vous vous rendez sur la zone de Lingostière, à l’aéroport ou la gare SNCF de Nice, c’est possible aussi d’inscrire votre trajet. C’est un service pour les habitants, animé par ses habitants !
 
 ![Calendrier](/assets/images/calendrier.png)
 
-[Rechercher un trajet](/recherche){: .btn .search }
+[Rechercher un trajet](/recherche){:target="_blank" .btn .search }
 
 # Conducteurs, vous avez un super-pouvoir
 ... Celui de partager vos trajets en voiture !
 
 ![Hero](/assets/images/logo-azurcomobi-vertical.png)
 
-[Proposer mon trajet](https://docs.google.com/forms/d/e/1FAIpQLSeInZJD79GJ-qg3Tkjz47uqsVgsZVy5awevxvhB67jK8KGGJQ/viewform?usp=sf_link){: .btn .proposal }
+[Proposer mon trajet](https://docs.google.com/forms/d/e/1FAIpQLSeInZJD79GJ-qg3Tkjz47uqsVgsZVy5awevxvhB67jK8KGGJQ/viewform?usp=sf_link){:target="_blank" .btn .proposal }
 
 <!--faq -->
 # Questions fréquentes
 
 ## Est-ce qu'il faut payer ?
 le prix : gratuit, mais vous pouvez aussi vous arranger avec votre conducteur si vos trajets sont réguliers. 
-Le service ${NomService} lui reste gratuit, pas d’échange d’argent via le site, c’est un service public accessible à tous !
+Le service {{ site.titre }} lui reste gratuit, pas d’échange d’argent via le site, c’est un service public accessible à tous !
 
 ## Faut-il faire l'aller et le retour ensemble ?
 Non, sauf si ça arrange tout le monde. Un passager peut faire
 l'aller et le retour avec des conducteurs différents.
 
 ## Est-ce que je peux contacter directement les conducteurs qui m'intéressent ?
-Oui, en cliquant [ici](/recherche) vous pouvez
+Oui, en cliquant [ici](/recherche){:target="_blank"} vous pouvez
 rechercher un trajet dans notre base de conducteurs inscrits.
 
 ## Comment ça se passe côté assurances et s'il y a un accident pendant le covoiturage ?
@@ -53,5 +53,5 @@ Pour toute modification ou suppression, vous pouvez contacter [Maureen DJENAIHI]
 Le site est fonctionnel et les trajets possibles en période de renforcement des
 mesures sanitaires. Nous appelons à la responsabilité des passagers et
 conducteurs pour respecter les gestes barrières et recommandations
-disponibles [ici](https://www.gouvernement.fr/sites/default/files/affiche_gestes_barrieres_covoiturage_a4.pdf).
+disponibles [ici](https://www.gouvernement.fr/sites/default/files/affiche_gestes_barrieres_covoiturage_a4.pdf){:target="_blank"}.
 
