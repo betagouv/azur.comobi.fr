@@ -7,7 +7,6 @@ const html = htm.bind(React.createElement)
 
 const cityInputElement = styled.input`
     margin: 0 0.6rem 0 0.6rem;
-    border: 3px solid steelblue;
     border-radius: 0.3rem;
     padding: 0.2rem 0.3rem;
     font-size: 110%;
@@ -47,6 +46,9 @@ const CityInput = ({ label, validPlaceNames, value, setValue }) => {
                 }}
                 onInvalid=${e => {
                     e.target.setCustomValidity(validationMessage);
+                }}
+                onBlur=${e => {
+                    e.target.checkValidity() // this triggers an 'invalid' event if input is invalid
                 }}
             />
         </label>
