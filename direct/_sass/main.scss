@@ -16,7 +16,7 @@ html {
 body {
 	font-family: $main-font;
 	height: 100%;
-	background-color: $main-background;
+	background-color: $main-background!important;
 	display: flex;
 	flex-direction: column;
 	margin: 0px;
@@ -153,7 +153,7 @@ a[href^='tel:']::before {
 	display: flex;
 	justify-content: center;
 	align-content: end;
-	background-color: #fffff6;
+	background-color: $main-background;
 }
 
 .trip-request-entry a {
