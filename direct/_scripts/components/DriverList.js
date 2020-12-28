@@ -41,7 +41,7 @@ export default function DriversList({
 				<p style=${{ marginBottom: '0rem' }}>
 					${tripProposalsByTrip.size} trajets disponibles sur ${instance.nom}
 				</p>
-				<a href="http://bit.ly/inscription-conducteur"
+				<a href="${instance.formulaire}"
 					>J'ai une voiture et je veux aider</a
 				>
 			</div>
