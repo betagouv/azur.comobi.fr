@@ -6,8 +6,8 @@
 	"scripts": {
 		"start": "(cp direct/Procfile .; cp direct/.env .; heroku local)",
 		"start:outil-metier": "(cp outil-metier/Procfile .; cp outil-metier/.env .; heroku local)",
-		"build": "webpack --config direct/webpack.config.js; webpack --config outil-metier/webpack.config.js",
-		"build:scripts": "NODE_ENV=development webpack --config direct/webpack.config.js",
+		"build:outil": "webpack --config outil-metier/webpack.config.js",
+		"build:direct": "NODE_ENV=development webpack --config direct/webpack.config.js",
 		"dev:site": "cd direct; jekyll serve",
 		"dev:server": "PORT=5000 NODE_ENV=development nodenv -E direct/.env direct/server.js --exec 'node -r esm'",
 		"dev:outil-metier": "PORT=5001 NODE_ENV=development nodenv -E outil-metier/.env outil-metier/server.js --exec 'node -r esm'",
