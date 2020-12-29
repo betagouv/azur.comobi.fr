@@ -107,5 +107,5 @@ json(`${SERVER_URL}/driver-trip-proposals`).then(tripProposals => {
 	store.mutations.addTripProposals(tripProposalsByTrip)
 })
 
-json(`${SERVER_URL}/http://localhost:5000/valid-place-names`).then(store.mutations.setValidPlaceNames)
+json(`${SERVER_URL}/valid-place-names`).then(store.mutations.setValidPlaceNames)
 
