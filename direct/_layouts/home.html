@@ -8,10 +8,11 @@ layout: default
   </div>
 </section>
 
-{% assign sections = content | split: "<!--faq -->" %}
-<section class="content">
-  {{ sections[0] }}
-</section>
-<section class="content faq">
-  {{ sections[1] }}
+<section >
+  {% assign sections = content | split: "<!-- section -->" %}
+  {% for section in sections %}
+  <section class="home-section">
+    {{ section }}
+  </section>
+  {% endfor %}
 </section>

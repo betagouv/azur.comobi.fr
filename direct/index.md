@@ -22,7 +22,7 @@ azur.comobi permet de réaliser tous les trajets du quotidien : école, sports, 
 
 [Proposer mon trajet](https://docs.google.com/forms/d/e/1FAIpQLSeInZJD79GJ-qg3Tkjz47uqsVgsZVy5awevxvhB67jK8KGGJQ/viewform?usp=sf_link){:target="_blank" .btn .proposal }
 
-<!--faq -->
+<!-- section -->
 # Questions fréquentes
 
 ## Est-ce qu'il faut payer ?
