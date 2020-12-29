@@ -18,7 +18,7 @@ export default function FAQ() {
 				<li>
 					<h3>Est-ce qu'il faut payer ?</h3>
 					<p>
-						le prix : gratuit, mais vous pouvez aussi vous arranger avec votre conducteur si vos trajets sont réguliers. 
+						Le prix : gratuit, mais vous pouvez aussi vous arranger avec votre conducteur si vos trajets sont réguliers. 
 						Le service ${NomService} lui reste gratuit, pas d’échange d’argent via le site, c’est un service public accessible à tous !
 					</p>
 				</li>
@@ -45,7 +45,7 @@ export default function FAQ() {
 				</li>
 				<li>
 					<h3>
-						Comment ça se passe côté assurances et s'il y a un accident pendant
+						Comment ça se passe côté assurances et en cas d'accident pendant
 						le covoiturage ?
 					</h3>
 
@@ -62,7 +62,7 @@ export default function FAQ() {
 					<p>
 						Les seules données collectées sont celles fournies par les conducteurs et conductrices.
 						Ces données sont utilisées uniquement pour la mise en relation avec les passager·ère·s.
-						Pour toute modification ou suppression, vous pouvez contacter <a href="mailto:mdjenaihi@valberg.com">Maureen DJENAIHI</a>.
+						Pour toute modification ou suppression, vous pouvez contacter <a href="mailto:azurcomobi@valberg.com">le service covoiturage</a>.
 					</p>
 				</li>
 				<li>
