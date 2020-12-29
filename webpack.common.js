@@ -2,13 +2,8 @@
 const path = require("path");
 let webpack = require('webpack')
 let devMode = process.env.NODE_ENV === 'development'
-let envFile = devMode ? '.env.development' : '.env'
-const dotenv = require('dotenv').config( {
-  path: path.join(__dirname, envFile)
-} );
-
+let dotenv = require('dotenv').config({path: __dirname + '/.env'});
 console.log(dotenv.parsed.INSTANCE);
-console.log(dotenv.parsed.SERVER_URL);
 
 module.exports = {
 	module: {
@@ -44,8 +39,7 @@ module.exports = {
 	plugins: [
 		devMode && new webpack.HotModuleReplacementPlugin(),
 		new webpack.DefinePlugin({
-			INSTANCE : JSON.stringify(dotenv.parsed.INSTANCE),
-			SERVER_URL : JSON.stringify(dotenv.parsed.SERVER_URL)
+			INSTANCE : JSON.stringify(dotenv.parsed.INSTANCE)
 		})
 	].filter(Boolean)
 }
