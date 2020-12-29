@@ -20,3 +20,5 @@ sass:
 
 exclude:
   - _scripts/
+
+destination: ../_site
