@@ -1,5 +1,5 @@
 ---
-layout: empty
+layout: default
 scripts:
     - src: "./build/bundle.js"
       defer: true
