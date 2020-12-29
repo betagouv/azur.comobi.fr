@@ -8,6 +8,7 @@ formulaire: https://docs.google.com/forms/d/e/1FAIpQLSeInZJD79GJ-qg3Tkjz47uqsVgs
 couleurs: 
   bouton_rechercher: '#199bb0'
   bouton_proposer: '#22aa75'
+  odd_section_color: '#ecf0f1'
 
 bandeau:
   image: /assets/images/Bandeau_azur_comobi.png

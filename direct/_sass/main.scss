@@ -1,7 +1,6 @@
 $footer-background: #4682b4;
 $main-background: rgb(255, 255, 246);
 $main-font: 'Work Sans', sans-serif;
-$faq-color: #ecf0f1;
 $header-background: rgb(184, 228, 231);
 
 
@@ -144,16 +143,15 @@ section.home-section {
 	}
 }
 
-section.home-section:nth-of-type(2n) {
-	background-color: $faq-color;
-}
-
 .react-component {
 	padding: 1rem calc(max(5px, -25em + 50vw));
 	display: flex;
 	justify-content: center;
 	align-content: end;
 	background-color: $main-background;
+	ul {
+    list-style-type: none;
+	}
 }
 
 .trip-request-entry a {
