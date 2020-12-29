@@ -3,7 +3,10 @@ import htm from 'htm'
 
 import TripSelection from './TripSelection.js'
 import styled from 'styled-components'
+import Privacy from './Privacy'
+import Inscription from './Inscription'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+const instance = require(`../../_instances/${INSTANCE}.yaml`)
 
 const html = htm.bind(React.createElement)
 
@@ -19,11 +22,6 @@ let Main = function({
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-
-			header,
-			footer {
-				flex-shrink: 0;
-			}
 		`}>
 			<${styled.div`
 				flex-grow: 1;
@@ -31,16 +29,17 @@ let Main = function({
 			<${Router}>
 			<${Switch}>
 			<${Route} path="/recherche">
-				<${TripSelection}
-				...${{
-					tripProposalsByTrip,
-					tripRequest,
-					tripDetailsByTrip,
-					validPlaceNames,
-					onTripRequestChange
-				}}<//>
+			<${TripSelection}
+			...${{
+				tripProposalsByTrip,
+				tripRequest,
+				tripDetailsByTrip,
+				validPlaceNames,
+				onTripRequestChange
+			}}<//>
 			<//>
 			<//><//>
+
 			</div>
 		</main>
 	`
