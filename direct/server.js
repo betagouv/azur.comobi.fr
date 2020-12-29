@@ -106,12 +106,23 @@ app.get('/valid-place-names', (req, res) => {
 		.catch(err => res.status(500).send(err))
 })
 
-// DONE BY JEKYLL SITE
-/*app.get('*', function(req, res) {
+app.get('/', function(req, res) {
 	res.sendFile('index.html', {
 		root: __dirname
 	})
-})*/
+})
+
+app.get('/recherche', function(req, res) {
+	res.sendFile('recherche.html', {
+		root: __dirname
+	})
+})
+
+app.get('/*', function(req, res) {
+	res.sendFile('404.html', {
+		root: __dirname
+	})
+})
 
 // NOT USED
 /*
