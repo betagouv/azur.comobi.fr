@@ -7,7 +7,7 @@ import {
 	ContactLinkButton as ContactButtonStyle
 } from './ButtonStyle'
 const html = htm.bind(React.createElement)
-const config = require(`../_config.yml`)
+const config = require(`../../_config.yml`)
 
 export default function TripProposal({
 	tripProposal,
