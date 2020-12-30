@@ -1,7 +1,7 @@
 // You can't use import statements here
 let webpack = require('webpack')
 let path = require('path')
-let common = require('../webpack.common.js')
+let common = require('./webpack.common.js')
 
 module.exports = {
 	...common,

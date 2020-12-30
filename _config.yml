@@ -23,5 +23,3 @@ exclude:
 
 keep_files:
   - build
-
-destination: ../_site
