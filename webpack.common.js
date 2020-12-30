@@ -30,7 +30,7 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.yaml$/,
+				test: /\.ya?ml$/,
 				use: 'js-yaml-loader'
 			}
 		]
