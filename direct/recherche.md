@@ -1,7 +1,7 @@
 ---
 layout: default
 scripts:
-    - src: "./build/bundle.js"
+    - src: "./frontend_build/bundle.js"
       defer: true
       crossorigin: "anonymous"
 ---
