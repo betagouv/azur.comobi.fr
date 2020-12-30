@@ -6,10 +6,8 @@
 	"scripts": {
 		"start": "node -r esm _site/server.js",
 		"start:outil-metier": "(cp outil-metier/Procfile .; cp outil-metier/.env .; heroku local)",
-		"postinstall": "npm run build:direct",
 		"build:outil": "webpack --config outil-metier/webpack.config.js",
-		"build:jekyll": "cd direct; jekyll build",
-		"build:direct": "(webpack --config direct/webpack.config.js; npm run build:jekyll)",
+		"build:direct": "webpack --config direct/webpack.config.js",
 		"dev:direct": "(NODE_ENV=development webpack --config direct/webpack.config.js; npm run build:jekyll)",
 		"dev": "PORT=5000 NODE_ENV=development nodenv -E .env _site/server.js --exec 'node -r esm'",
 		"dev:jekyll": "cd direct; jekyll serve",
