@@ -15,10 +15,6 @@ jobs:
         run: |
           npm install
           npm run build:direct
-      - name: ya koi ?
-        run: |
-          ls -l direct/
-          ls -l direct/build
       - name: Build and Push Jekyll site
         uses: helaili/jekyll-action@2.0.4
         env:
