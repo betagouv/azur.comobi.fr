@@ -3,7 +3,7 @@ import htm from 'htm'
 import styled from 'styled-components'
 import TripProposal from './TripProposal'
 import computeDetour from './computeDetour'
-const instance = require(`../../_instances/${INSTANCE}.yaml`)
+const config = require(`../../_config.yml`)
 
 const html = htm.bind(React.createElement)
 
@@ -42,9 +42,9 @@ export default function DriversList({
 		return html`
 			<div style=${{ textAlign: 'center', marginTop: '2rem' }}>
 				<p style=${{ marginBottom: '0rem' }}>
-					${tripProposalsByTrip.size} trajets disponibles sur ${instance.nom}
+					${tripProposalsByTrip.size} trajets disponibles sur ${config.nom}
 				</p>
-				<a href="${instance.formulaire}"
+				<a href="${config.formulaire}"
 					>J'ai une voiture et je veux aider</a
 				>
 			</div>`

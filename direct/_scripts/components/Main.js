@@ -6,7 +6,6 @@ import styled from 'styled-components'
 import Privacy from './Privacy'
 import Inscription from './Inscription'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-const instance = require(`../../_instances/${INSTANCE}.yaml`)
 
 const html = htm.bind(React.createElement)
 
