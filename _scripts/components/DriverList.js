@@ -3,7 +3,7 @@ import htm from 'htm'
 import styled from 'styled-components'
 import TripProposal from './TripProposal'
 import computeDetour from './computeDetour'
-const config = require(`../../_config.yml`)
+const config = require(`../_config.yml`)
 
 const html = htm.bind(React.createElement)
 
