@@ -21,4 +21,7 @@ sass:
 exclude:
   - _scripts/
 
+keep_files:
+  - build
+
 destination: ../_site
