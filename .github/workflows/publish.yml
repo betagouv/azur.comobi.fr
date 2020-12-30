@@ -21,5 +21,4 @@ jobs:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
         with:
           target_branch: 'heroku'
-          jekyll_src: 'direct'
       
