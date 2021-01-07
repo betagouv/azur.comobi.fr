@@ -13,3 +13,5 @@ _site/*
 vendor
 
 *.DS_Store
+
+frontend_build
