@@ -23,3 +23,9 @@ exclude:
 
 keep_files:
   - build
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
