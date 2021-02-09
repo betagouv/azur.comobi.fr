@@ -10,7 +10,7 @@ couleurs:
   odd_section_color: "#ecf0f1"
 
 bandeau:
-  image: "/assets/images/Bandeau_azur_comobi.png"
+  image: "/images/Bandeau_azur_comobi.png"
   texte: "Bandeau azur.comobi.fr avec le logo comobi et les logos des collectivités qui financent"
 
 ## Les sections suivantes ne sont pas à modifier
