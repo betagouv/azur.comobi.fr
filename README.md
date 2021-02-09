@@ -77,5 +77,4 @@ Pour trouver les **latitude/longitude**, une manière de faire consiste à aller
 - Code et messages de commit en anglais
 
 ## Licence
-
 [MIT](LICENCE)
