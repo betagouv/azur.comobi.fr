@@ -3,6 +3,7 @@ mail: "azurcomobi@valberg.com"
 tel: "04 93 23 24 25"
 nom: "Station Valberg"
 formulaire: "https://docs.google.com/forms/d/e/1j-t2t9_X-YNTxfrsmIB64t8MSaVVKkETXrxZ1NBg9rI/viewform?usp=sf_link"
+liste_ville_restreinte: "oui"
 
 couleurs: 
   bouton_rechercher: "#199bb0"
@@ -18,11 +19,20 @@ sass:
   sass_dir: _sass
   style: compressed
 
+code_source:
+  instance: https://github.com/betagouv/azur.comobi.fr
+  comobi: https://github.com/betagouv/comobi
+
+
 exclude:
-  - _scripts/
+  - direct/
+  - outil-metier/
+
+include:
+  - _config.yml 
 
 keep_files:
-  - build
+  - _config.yml 
 
 defaults:
   - scope:
