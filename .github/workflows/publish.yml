@@ -2,7 +2,7 @@ name: Build and Deploy
 on: 
   push:
     branches:
-      - newArchitecture
+      - release1702
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
