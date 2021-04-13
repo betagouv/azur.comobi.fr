@@ -13,7 +13,7 @@ jobs:
           persist-credentials: false
       - name: Clone comobi repository
         run: |
-          git clone https://github.com/betagouv/comobi.git
+          git clone https://github.com/betagouv/comobi-core.git
       - name: move files
         run: |
           mv comobi/* .
