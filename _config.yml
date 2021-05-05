@@ -13,7 +13,7 @@ couleurs:
   header_btn_section: "#c4e1e5"
 
 bandeau:
-  image: "/images/Bandeau_azur_comobi.png"
+  image: "/images/logo-azurcomobi-vertical.png"
   texte: "Bandeau azur.comobi.fr avec le logo comobi et les logos des collectivités qui financent"
 
 ## Les sections suivantes ne sont pas à modifier
