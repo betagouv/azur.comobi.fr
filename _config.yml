@@ -21,25 +21,21 @@ sass:
   sass_dir: _sass
   style: compressed
 
-code_source:
-  instance: https://github.com/betagouv/azur.comobi.fr
-  comobi: https://github.com/betagouv/comobi
-
-
 exclude:
   - direct/
   - outil-metier/
+  - tests/
 
 include:
   - _config.yml 
 
-keep_files:
-  - _config.yml 
+code_source:
+  instance: https://github.com/betagouv/azur.comobi.fr
+  comobi: https://github.com/betagouv/comobi
+
 
 defaults:
   - scope:
       path: "assets/img"
     values:
       image: true
-
-updated: "30-03-2021"
