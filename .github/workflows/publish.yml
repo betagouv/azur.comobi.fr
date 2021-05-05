@@ -2,7 +2,7 @@ name: Build and Deploy
 on: 
   push:
     branches:
-      - main
+      - release_0505
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,6 +14,15 @@ jobs:
       - name: Clone specific repository
         run: |
           git clone --depth 1 ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY} specific
+      - name: go in specific 
+        run: |
+          cd specific/
+      - name: Checkout 
+        run: |
+          git checkout release_0505
+      - name: return 
+        run: |
+          cd ..
       - name: Override generic files with specific ones
         run: |
           mv specific/* .
