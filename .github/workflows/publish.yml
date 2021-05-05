@@ -17,6 +17,10 @@ jobs:
       - name: go in specific 
         run: |
           cd specific/
+      - name: fetch 
+        run: |
+          git fetch origin
+      - name: return 
       - name: Checkout 
         run: |
           git checkout release_0505
