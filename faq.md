@@ -10,7 +10,7 @@ Non, sauf si ça arrange tout le monde. Un passager peut faire
 l'aller et le retour avec des conducteurs différents.
 
 -  Est-ce que je peux contacter directement les conducteurs qui m'intéressent ?
-Oui, en cliquant [ici](/recherche){:target="_blank"} vous pouvez
+Oui, en cliquant [ici](/){:target="_blank"} vous pouvez
 rechercher un trajet dans notre base de conducteurs inscrits.
 
 - Comment ça se passe côté assurances et en cas d'accident pendant le covoiturage ?
