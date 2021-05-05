@@ -2,7 +2,7 @@ name: Build and Deploy
 on: 
   push:
     branches:
-      - main
+      - release_0505
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -26,6 +26,6 @@ jobs:
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
         with:
-          target_branch: 'heroku'
+          target_branch: 'deploy'
           jekyll_src: .
       
