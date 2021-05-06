@@ -8,7 +8,7 @@ image:
 
 title:  # Optionnel
   text: "Circulez autour de Valberg accompagné.e.s"
-  background: antiquewhite
+  background: #f6f6f6
   
 slogans:
   - title: Solidaire !
