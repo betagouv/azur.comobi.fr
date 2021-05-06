@@ -7,6 +7,14 @@ scripts:
 styles:
   - href: "./frontend_build/bundle.css"
 
-title: Trouvez un covoiturage pour vous déplacer pour vos trajets réguliers à Valberg
-title-img: "/images/logo-azurcomobi-vertical.png"
+
+image:
+  url: "generic-images/Bandeau_azur_comobi.png"
+  alt: "bandeau azur"
+  bandeau: true
+
+#title:  # Optionnel
+#  text: Conducteurs vous avez un super pouvoir !
+#  background: antiquewhite
+  
 ---
