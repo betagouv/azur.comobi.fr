@@ -9,7 +9,7 @@ styles:
 
 
 image:
-  url: "generic-images/Bandeau_azur_comobi.png"
+  url: "images/Bandeau_azur_comobi.png"
   alt: "bandeau azur"
   bandeau: true
 
