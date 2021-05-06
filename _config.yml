@@ -5,16 +5,7 @@ nom: "Station Valberg"
 formulaire: "https://docs.google.com/forms/d/e/1FAIpQLSfGMC7WAg39YcbJUqEf6NjvDrG3erDZe66VFqOxRbWW2_5dpw/viewform?usp=sf_link"
 liste_ville_restreinte: "oui"
 lien_cgu: "/cgu"
-
-couleurs: 
-  bouton_rechercher: "#199bb0"
-  bouton_proposer: "#22aa75"
-  odd_section_color: "#ecf0f1"
-  header_btn_section: "#c4e1e5"
-
-bandeau:
-  image: "/images/logo-azurcomobi-vertical.png"
-  texte: "Bandeau azur.comobi.fr avec le logo comobi et les logos des collectivités qui financent"
+code_departement: "06"
 
 ## Les sections suivantes ne sont pas à modifier
 sass:
