@@ -7,6 +7,9 @@ liste_ville_restreinte: "oui"
 lien_cgu: "/cgu"
 code_departement: "06"
 
+liste-logo:
+  - images/logo-valberg.png
+
 ## Les sections suivantes ne sont pas à modifier
 sass:
   sass_dir: _sass
