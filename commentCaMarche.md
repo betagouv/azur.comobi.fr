@@ -20,4 +20,9 @@ slogans:
   - title: Economique !
     icon: generic-images/icons/economique.svg
     msg: Mettez vous d’accord sur un partage juste des frais sur vos trajets.
+
+conducteur-img:
+  url: "images/carte.png"
+  alt: "carte"
+  height: "25rem"
 ---
