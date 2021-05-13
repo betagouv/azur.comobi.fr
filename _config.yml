@@ -1,0 +1,35 @@
+titre: "Azur.CoMobi"
+mail: "azurcomobi@valberg.com"
+tel: "04 93 23 24 25"
+nom: "Station Valberg"
+formulaire: "https://docs.google.com/forms/d/e/1FAIpQLSfGMC7WAg39YcbJUqEf6NjvDrG3erDZe66VFqOxRbWW2_5dpw/viewform?usp=sf_link"
+liste_ville_restreinte: "oui"
+lien_cgu: "/cgu"
+code_departement: "06"
+
+liste-logo:
+  - images/logo-valberg.png
+
+## Les sections suivantes ne sont pas à modifier
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - direct/
+  - outil-metier/
+  - tests/
+
+include:
+  - _config.yml 
+
+code_source:
+  instance: https://github.com/betagouv/azur.comobi.fr
+  comobi: https://github.com/betagouv/comobi
+
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
