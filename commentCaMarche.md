@@ -24,5 +24,5 @@ slogans:
 conducteur-img:
   url: "images/carte.png"
   alt: "carte"
-  height: "25rem"
+  height: "400"
 ---
