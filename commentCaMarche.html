@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Azur.CoMobi</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+	<link crossorigin="anonymous" rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/twbs/bootstrap@v4/dist/css/bootstrap-reboot.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Work+Sans&display=swap" rel="stylesheet" />
+  <script crossorigin="anonymous"
+      src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.flat%2CArray.prototype.includes%2CObject.entries%2CObject.fromEntries%2CPromise%2CPromise.prototype.finally%2CObject.values%2Cfetch%2Ces2018%2Ces2017%2Ces2016%2Ces2015"></script>
+
+</head>
+
+<body>
+
+  
+<header class="header">
+  <div class="menu">
+    <div class="topnav">
+      <a class="icon" onclick="openMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <div class="logo">
+        <p class="instance-name">Azur.CoMobi</p>
+        <div class="with-comobi">avec <img src="generic-images/logo-comobi-sfblack.svg"/></div>
+      </div>
+      <div class="menu-item-list">
+        <a class="menu-item" href="/">Tous les trajets</a>
+        <a class="menu-item" href="/commentCaMarche">Comment ça marche ?</a>
+        <a class="menu-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfGMC7WAg39YcbJUqEf6NjvDrG3erDZe66VFqOxRbWW2_5dpw/viewform?usp=sf_link">Proposer un trajet</a>
+      </div>
+    </div>
+    <div class="header-button">
+      <a class="search-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfGMC7WAg39YcbJUqEf6NjvDrG3erDZe66VFqOxRbWW2_5dpw/viewform?usp=sf_link">Proposer un trajet</a>
+    </div>
+  </div>
+</header>
+
+<script>
+function openMobileMenu() {
+  let menuItemListElements = document.getElementsByClassName("menu-item-list");
+  if (menuItemListElements.length > 0) {
+    let menuItemList = menuItemListElements.item(0);
+    if (menuItemList.style.display === "block") {
+      menuItemList.style.display = "none";
+    } else {
+      menuItemList.style.display = "block";
+    }
+  }
+}
+
+function displayActiveMenuItem() {
+    let path = decodeURIComponent(window.location);
+    let menuItemList = document.getElementsByClassName("menu-item-list");
+    if (menuItemList.length > 0) {
+      let menuItem = menuItemList.item(0).children;
+      for(i=0 ; i < menuItem.length ; i+=1) {
+        let item = menuItem.item(i);
+          if (path === item.href) {
+              item.className += " active";
+          }
+      }
+    } else {
+      throw "there is no menu item";
+    }
+}
+displayActiveMenuItem()
+</script>
+  
+  <main>
+    <div class="header-title">
+    
+<img class="logo-title hiw" src="generic-images/logo-long-web.png" alt="logo comobi" />
+
+
+
+<h1 style="background: ;">Circulez autour de Valberg accompagné.e.s</h1>
+
+</div>
+
+<section class="how-it-works">
+    
+    <div class="slogan-list">
+        
+        <div class="slogan">
+            <img src="generic-images/icons/solidaire.svg"/>
+            <h3>Solidaire !</h3>
+            <p>Aidez des personnes non véhiculées à rejoindre un rendez-vous médical, un entretien, ou leur travail. Faites des rencontres.</p>
+        </div>
+        
+        <div class="slogan">
+            <img src="generic-images/icons/ecologique.svg"/>
+            <h3>Ecologique !</h3>
+            <p>En limitant l’autosolisme, vous participez à limiter les émissions de CO2 et la pollution atmosphérique</p>
+        </div>
+        
+        <div class="slogan">
+            <img src="generic-images/icons/economique.svg"/>
+            <h3>Economique !</h3>
+            <p>Mettez vous d’accord sur un partage juste des frais sur vos trajets.</p>
+        </div>
+        
+    </div>
+    
+    <a class="search-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfGMC7WAg39YcbJUqEf6NjvDrG3erDZe66VFqOxRbWW2_5dpw/viewform?usp=sf_link">Proposer un trajet</a>
+    <div class="explanation">
+    <div>
+        <h3>Comment ça marche ?</h3>
+        <p><span>1</span> Déposez vos horaires de trajet sur <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGMC7WAg39YcbJUqEf6NjvDrG3erDZe66VFqOxRbWW2_5dpw/viewform?usp=sf_link"> ce formulaire</a></p>
+        <p><span>2</span> Un passager vous contacte par téléphone, par sms ou email</p>
+        <p><span>3</span> Organisez vous pour le trajet</p>
+        <a class="search-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfGMC7WAg39YcbJUqEf6NjvDrG3erDZe66VFqOxRbWW2_5dpw/viewform?usp=sf_link">Je propose un trajet</a>
+    </div>
+    <img 
+        src="images/carte.png" 
+        alt="carte"
+        height="400"/>
+    </div>
+</section>
+<!-- est-ce que je pourrais éviter le for ? -->
+
+    
+
+    
+
+    
+
+    
+        <section class="faq">
+    <h1 id="questions-fréquentes">Questions fréquentes</h1>
+
+<ul>
+  <li>
+    <p>Est-ce qu’il faut payer ?
+Le prix : gratuit, mais vous pouvez aussi vous arranger avec votre conducteur si vos trajets sont réguliers. Le service lui reste gratuit, pas d’échange d’argent via le site, c’est un service public accessible à tous !</p>
+  </li>
+  <li>
+    <p>Faut-il faire l’aller et le retour ensemble ?
+Non, sauf si ça arrange tout le monde. Un passager peut faire
+l’aller et le retour avec des conducteurs différents.</p>
+  </li>
+  <li>
+    <p>Est-ce que je peux contacter directement les conducteurs qui m’intéressent ?
+Oui, en cliquant <a href="/" target="_blank">ici</a> vous pouvez
+rechercher un trajet dans notre base de conducteurs inscrits.</p>
+  </li>
+  <li>
+    <p>Comment ça se passe côté assurances et en cas d’accident pendant le covoiturage ?
+L’assurance responsabilité civile du conducteur (comprise dans l’assurance auto) couvre les passagers et les indemnise en cas d’accident. Le conducteur doit prévenir son assureur qu’il pratique le covoiturage et s’assurer que les trajets domicile-travail sont bien couverts.</p>
+  </li>
+  <li>
+    <p>Qu’en est-il de la protection des données personnelles ?
+Les seules données collectées sont celles fournies par les conducteurs et conductrices.
+Ces données sont utilisées uniquement pour la mise en relation avec les passager·ère·s.
+Pour toute modification ou suppression, vous pouvez contacter <a href="mailto:azurcomobi@valberg.com">le service covoiturage</a>.</p>
+  </li>
+  <li>
+    <p>Et en période de COVID ?
+Le site est fonctionnel et les trajets possibles en période de renforcement des mesures sanitaires. Nous appelons à la responsabilité des passagers et conducteurs pour respecter les gestes barrières et recommandations disponibles <a href="https://www.gouvernement.fr/sites/default/files/affiche_mesures_barrieres_covoiturage.pdf" target="_blank">ici</a>.</p>
+  </li>
+</ul>
+
+
+</section>
+    
+
+    
+
+    
+
+  </main>
+
+  <section class="partner-section">
+	<p>Station Valberg existe grâce au soutien de nombreux partenaires</p>
+	<p>Nous les remercions chaleureusement !</p>
+	<div class="partner-logo-list">
+	  <!-- Liste logo obligatoires -->
+	  <img src="generic-images/ademe_logo.jpg"/>
+	  <img src="generic-images/ANCT_Logo.jpg"/>
+	  <img src="generic-images/beta_gouv_logo.jpg"/>
+	  <!-- Logo en plus -->
+	  
+	  	<img src="images/logo-valberg.png"/>
+	  
+	</div>
+	<p>Vous souhaitez mettre en place du covoiturage sur votre territoire ?</p>
+	<p>Comobi est gratuit, open-source, et vous propose un accompagnement personnalisé !</p>
+	<a class="search-btn" href="mailto:azurcomobi@valberg.com" >Demander une démonstration</a>
+
+  </section>
+<footer>
+	<section class="footer">
+		<div>
+			<p>Distribué par <img src="generic-images/logo-comobi-sfb.png" /> </p>
+			<a href="http://comobi.fr">site internet</a>
+			<a href="https://github.com/betagouv/comobi" target="_blank">Code source comobi-core</a>
+			<a href="https://github.com/betagouv/azur.comobi.fr" target="_blank">Code source de cette instance</a>
+			<a href="/cgu">Conditions Générales D'utilisation</a>
+		</div>
+		<div>
+				<p>Nous contacter - Azur.CoMobi <br /> </p>
+				<p>Email :  <a href="mailto:azurcomobi@valberg.com">azurcomobi@valberg.com </a></p>
+				<p>Tél : <a href="tel:04 93 23 24 25">04 93 23 24 25 </a> </p>
+		</div>
+	</section>
+</footer>
+
+
+</body>
+
+</html>

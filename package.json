@@ -1,0 +1,65 @@
+{
+	"name": "lotocar",
+	"version": "1.0.0",
+	"description": "Le projet [Lot'ô car](https://www.lotocar.fr/) a commencé avec une base de données dans un Google Spreadsheet à plusieurs feuilles gérée manuellement",
+	"main": "index.js",
+	"scripts": {
+		"start": "node server.js",
+		"build:jekyll": "bundle exec jekyll build",
+		"build:direct": "rollup -c",
+		"dev": "npm-run-all -p dev:*",
+		"dev:server": "PORT=5000 NODE_ENV=development nodenv -E .env _site/server.js",
+		"dev:jekyll": "bundle exec jekyll build -w --incremental",
+		"dev:svelte": "rollup -c -w",
+		"test": "ava"
+	},
+	"type": "module",
+	"engines": {
+		"node": ">=14"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DavidBruant/lotocar.git"
+	},
+	"author": "David Bruant <bruant.d@gmail.com> (https://twitter.com/DavidBruant)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/DavidBruant/lotocar/issues"
+	},
+	"homepage": "https://github.com/DavidBruant/lotocar#readme",
+	"dependencies": {
+		"@mapbox/polyline": "^1.1.1",
+		"baredux": "github:DavidBruant/baredux",
+		"cors": "^2.8.5",
+		"d3-fetch": "^1.1.2",
+		"date-fns": "^2.18.0",
+		"delay": "^4.3.0",
+		"express": "^4.17.1",
+		"fast-memoize": "^2.5.1",
+		"geodesy": "^2.2.0",
+		"googleapis": "^66.0.0",
+		"got": "^9.6.0",
+		"js-yaml": "^4.0.0",
+		"lodash-es": "^4.17.15",
+		"p-retry": "^4.1.0",
+		"page": "^1.11.6",
+		"svelte-preprocess": "^4.7.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.6.4",
+		"@rollup/plugin-commonjs": "^17.0.0",
+		"@rollup/plugin-node-resolve": "^11.0.0",
+		"@rollup/plugin-yaml": "^3.0.0",
+		"ava": "^3.15.0",
+		"node-env-run": "^4.0.2",
+		"npm-run-all": "^4.1.5",
+		"rollup": "^2.3.4",
+		"rollup-plugin-css-only": "^3.1.0",
+		"rollup-plugin-livereload": "^2.0.0",
+		"rollup-plugin-svelte": "^7.0.0",
+		"rollup-plugin-terser": "^7.0.0",
+		"sass": "^1.32.8",
+		"svelte": "^3.0.0",
+		"webpack": "^4.46.0"
+	}
+}
